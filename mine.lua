@@ -9,9 +9,7 @@ end
 
 while true do
     for c = 1, 3 do
-        for d = 1, 10 do
-            avancer()
-        end
+        avancer()
         turtle.turnRight()
     end
     distance = distance - 1
