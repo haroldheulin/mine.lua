@@ -7,13 +7,10 @@ function avancer()
     end
 end
 
-while true do
+while distance > 1 do
     for c = 1, 3 do
         avancer()
         turtle.turnRight()
     end
     distance = distance - 1
-    if distance == 0 then
-        os.exit()
-    end
 end
