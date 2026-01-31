@@ -1,16 +1,33 @@
 distance = 10
 
 function avancer()
-    for x = 1, distance do
+    for d = 1, distance do
         turtle.forward()
         turtle.dig()
     end
 end
 
-while distance > 1 do
-    for c = 1, 3 do
-        avancer()
-        turtle.turnRight()
+function forward()
+    while distance > 1 do
+        for c = 1, 3 do
+           avancer()
+           turtle.turnRight()
+        end
+        distance = distance - 1
     end
-    distance = distance - 1
+end
+
+while true do
+    forward()
+    for x = 1, 6 do
+        turtle.forward()
+    end
+    tutle.turnRight()
+    for x = 1, 5 do
+        turtle.forward()
+    end
+    turtle.turnRight()
+    turtle.digDown()
+    turtle.down()
+    distance = 10
 end
