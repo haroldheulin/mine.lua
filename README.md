@@ -1,1 +1,1 @@
-# mine.lua
+print("hello world")
