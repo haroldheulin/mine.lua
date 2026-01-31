@@ -1,43 +1,35 @@
-local distance = 10
+distance = 10
+x = 0
+y = 0
+z = 0
 
-function avancer(n)
-    for i = 1, n do
+function avancer()
+    for d = 1, distance do
+        turtle.forward()
         turtle.dig()
-        turtle.forward()
     end
 end
 
-function creuserCarre(taille)
-    local d = taille
-    while d > 0 do
-        for side = 1, 4 do
-            avancer(d - 1)
-            turtle.turnRight()
+function forward()
+    while distance > 1 do
+        for c = 1, 3 do
+           avancer()
+           turtle.turnRight()
         end
-        d = d - 2
-        if d > 0 then
-            turtle.forward()
-            turtle.turnRight()
-        end
+        distance = distance - 1
     end
-end
-
-function retourCoinDepart(taille)
-    turtle.turnRight()
-    turtle.turnRight()
-    for i = 1, taille - 1 do
-        turtle.forward()
-    end
-    turtle.turnRight()
-    for i = 1, taille - 1 do
-        turtle.forward()
-    end
-    turtle.turnRight()
 end
 
 while true do
-    creuserCarre(distance)
-    retourCoinDepart(distance)
+    forward()
+    for x = 1, 6 do
+        turtle.forward()
+    end
+    tutle.turnRight()
+    for x = 1, 5 do
+        turtle.forward()
+    end
+    turtle.turnRight()
     turtle.digDown()
-    turtle.down()
+    trurtle.down()
 end
