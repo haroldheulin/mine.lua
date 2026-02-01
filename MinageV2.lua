@@ -1,4 +1,7 @@
 distance = 10
+x = 0
+y = 0
+orientation = 1
 
 function cube()
     for i = 1, 9 do
@@ -6,6 +9,16 @@ function cube()
             for x = 1, distance do
                 turtle.dig()
                 turtle.forward()
+                if orientation == 1 then
+                    x = x + 1
+                elseif orientation == 2 then
+                    y = y + 1
+                elseif orientation == 3 then
+                    x = x - 1
+                elseif orientation == 4 then
+                    y = y - 1
+                end
+                print("X: " .. x .. " Y: " .. y)
             end
             turtle.turnRight()
             print("Orientation start " .. orientation)
