@@ -36,7 +36,7 @@ function cube(distance)
         turtle.turnRight()
         turtle.forward()
         turtle.turnLeft()
-        distance = distance - 1
+        distance = distance - 2
     end
 end
 
