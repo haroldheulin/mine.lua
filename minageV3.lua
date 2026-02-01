@@ -5,7 +5,7 @@ orientation = 1
 
 for i = 1, 9 do
     for c = 1, 4 do
-        for x = 1, distance do
+        for b = 1, distance do
             turtle.dig()
             turtle.forward()
             if orientation == 1 then
@@ -37,19 +37,21 @@ for i = 1, 9 do
     print(distance)
 end
 
+print("Finished mining cube")
+
+turtle.turnLeft()
 turtle.turnLeft()
 for returnX = 1, 5 do
     turtle.forward()
 end
-turtle.turnLeft()
-for returnY = 1, 5 do
-    turtle.forward()
-end
 turtle.turnRight()
-turtle.sleep(0.5)
+for returnY = 1, 5 do
+        turtle.forward()
+end
 turtle.turnRight()
 turtle.digDown()
 turtle.down()
 distance = 10
-print("Finished mining cube")
+x = 0
+y = 0
 
