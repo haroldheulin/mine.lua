@@ -46,26 +46,16 @@ end
 for x = 1, 5 do
     cube()
     print("Finished mining cube")
-    print("Final Position X: " .. x .. " Y: " .. y)
-
-    --TranslationX = x - BaseX
-    --TranslationY = y - BaseY
-
-    while orientation ~= 3 do -- Sorienter vers l'origine
-        turtle.turnRight()
-        orientation = orientation + 1
+    turtle.turnLeft()
+    turtle.turnLeft()
+    for returnX = 1, 5 do
+        turtle.forward()
     end
-    for Transx = 1, x do -- retourner sur le X d'origine
+    turtl.turnRight()
+    for returnY = 1, 5 do
         turtle.forward()
     end
     turtle.turnRight()
-    for Transy = 1, y do -- retourner sur le Y d'origine
-        turtle.forward()
-    end
-    while orientation ~= 1 do -- S'orienter pour recomencer
-        turtle.turnRight()
-        orientation = orientation + 1
-    end
     turtle.digDown()
     turtle.down()
     distance = 10
